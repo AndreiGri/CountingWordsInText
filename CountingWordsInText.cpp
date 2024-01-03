@@ -22,10 +22,10 @@ int main()
 
     int count = 0;
     bool found = false;
-    for (int j = 0; j < text.length(); j++) {
+    for (int j = 0; j + word.length() <= text.length(); j++) {
         bool match = true;
         for (int i = 0; i < word.length(); i++) {
-            if (i + j > text.length() || word[i] != text[i + j]) {
+            if (word[i] != text[i + j]) {
                 match = false;
                 break;
             }
